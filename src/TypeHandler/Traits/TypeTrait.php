@@ -17,7 +17,7 @@ trait TypeTrait
         $this->validateStrategy($strategy);
 
         return sprintf(
-            '%s.%s %s :%s',
+            'CAST(%s.%s AS CHAR) %s :%s',
             $alias,
             $field,
             StrategyType::strategySign($strategy),
